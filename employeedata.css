@@ -1,0 +1,235 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.header {
+    background-color: #ffffff;
+    color: rgb(15, 13, 114);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.header img {
+    height: 40px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.header .profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header .profile span {
+    margin-right: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.header .profile .role {
+    color: #0e3b9c;
+}
+
+.header .profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 200px;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu a i {
+    margin-right: 10px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.container {
+    padding: 20px;
+}
+
+.dropdown-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.dropdown-container .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
+}
+
+.dropdown-container .dropdown label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.dropdown-container .dropdown select {
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.feedback-trends-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.feedback-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.feedback-box div {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 150px;
+    margin: 5px;
+    flex: 1;
+    border: 1px solid #ccc;
+}
+
+.no-of-resources {
+    background-color: #002244;
+    color: white;
+}
+
+.adequate {
+    background-color: #f0f8ff;
+}
+
+.low {
+    background-color: #fdd835;
+}
+
+.over {
+    background-color: #dcedc8;
+}
+
+.qualified {
+    background-color: #b2ff59;
+}
+
+.declined {
+    background-color: #ef9a9a;
+}
+
+.improved {
+    background-color: #a5d6a7;
+}
+
+.status-quo {
+    background-color: #e1bee7;
+}
+
+.skill-availability, .resource-details {
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.skill-availability-header, .resource-details-header {
+    background-color: #002244;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.skill-availability-content, .resource-details-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.resource-details .year-quarter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.resource-details select, .resource-details button {
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.resource-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.resource-details th, .resource-details td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.resource-details th {
+    background-color: #002244;
+    color: white;
+}
+
+.btn {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #002244;
+}

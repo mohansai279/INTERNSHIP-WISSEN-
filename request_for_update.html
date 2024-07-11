@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request for Update</title>
+    <link rel="stylesheet" href="request_for_update.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <img src="dasboardlogo.png" alt="Wissen Logo">
+        <h1>SERVICE CATALOG</h1>
+        <div class="profile" id="profile">
+            <span id="employee-name">Employee Name</span>
+            <span class="role" id="employee-role">(Role)</span>
+            <img src="profile.png" alt="Profile Picture">
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="#"><i class="fas fa-user"></i> My Options</a>
+                <a href="assess_my_score.html" id="assess-update-link"><i class="fas fa-chart-bar"></i> Assess My Scores</a>
+                <a href="employeedata.html" id="employee-update-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                <a href="dashboard.html" id="home-link"><i class="fas fa-home"></i> Home</a>
+                <a href="forgertpassword.html"><i class="fas fa-unlock-alt"></i> Reset Password</a>
+                <a href="index.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="update-form">
+            <h2>Update Info</h2>
+            <form id="update-form" novalidate>
+                <div class="input-container">
+                    <label for="employee-id">Employee Id*</label>
+                    <input type="text" id="employee-id" name="employee-id" disabled>
+                </div>
+                <div class="input-container">
+                    <label for="employee-name">Employee Name*</label>
+                    <input type="text" id="employee-name-input" name="employee-name" required>
+                </div>
+                <div class="input-container">
+                    <label for="employee-email">Employee Email*</label>
+                    <input type="email" id="employee-email" name="employee-email" required>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" class="btn">Submit</button>
+                    <button type="button" class="btn" onclick="history.back()">Back</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="success-box" id="success-box">
+        <div class="checkmark">✔</div>
+        <p>Profile updated successfully!</p>
+    </div>
+
+    <script src="request_for_update.js" type="module"></script>
+    <!-- <script src="requestdyanamic.js"></script>
+    <script src="dynamictotal.js"></script> -->
+</body>
+</html>

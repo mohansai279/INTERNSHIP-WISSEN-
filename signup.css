@@ -1,0 +1,113 @@
+ 
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        .left-panel {
+            background-color: #0b2b4a;
+            color: white;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .left-panel img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .left-panel h2 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .left-panel p {
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+        .right-panel {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            box-sizing: border-box;
+        }
+        .signup-form {
+            width: 100%;
+            max-width: 400px;
+        }
+        .signup-form h2 {
+            margin-bottom: 20px;
+        }
+        .signup-form h3 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .btn:hover {
+            background-color: darkblue;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: blue;
+            text-decoration: underline;
+        }
+        .success-box {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 2px solid #0b2b4a;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            z-index: 1000;
+        }
+        .success-box .checkmark {
+            font-size: 50px;
+            color: green;
+            margin-bottom: 10px;
+        }

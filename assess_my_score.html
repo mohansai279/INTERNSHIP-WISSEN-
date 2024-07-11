@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Catalog</title>
+    <link rel="stylesheet" href="assess_my_score.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <img src="dasboardlogo.png" alt="Wissen Logo">
+        <h1>SERVICE CATALOG</h1>
+        <div class="profile" id="profile">
+            <span id="employee-name">Name</span>
+            <span class="role" id="employee-role">(Employee)</span>
+            <img src="profile.png" alt="Profile Picture">
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="#"><i class="fas fa-user"></i>My Options</a>
+                <a href="assess_my_score.html" id="assess-update-link"><i class="fas fa-chart-bar"></i>Assess My Scores</a>
+                <a href="employeedata.html" id="employee-update-link"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                <a href="dashboard.html" id="home-link"><i class="fas fa-home"></i>Home</a>
+                <a href="forgot_password.html"><i class="fas fa-unlock-alt"></i>Reset Password</a>
+                <a href="index.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="top-right-buttons">
+            <div class="btn-group">
+                <button class="save-draft" id="save-draft" style="display:none;">Save as Draft</button>
+                <button class="submit" id="submit" style="display:none;">Submit</button>
+            </div>
+            <button class="quarter-scores" id="quarter-scores" style="display:none;">Published Quarter Scores</button>
+        </div>
+        <h2 class="blue-text">SELF ASSESSMENT</h2>
+        <div class="dropdown-container">
+            <div class="form-group">
+                <label for="manager-name">Manager Name:</label>
+                <select id="manager-name">
+                    <option value="">Select Manager</option>
+                    <option value="mohan_sai">Mohan Sai</option>
+                    <option value="tharak">Tharak</option>
+                    <option value="badhri">Badhri</option>
+                    <option value="bhuvan">Bhuvan</option>
+                    <option value="surendra">Surendra</option>
+                    <option value="varshith">Varshith</option>
+                    <option value="deekshitha">Deekshitha</option>
+                    <option value="keerthi">Keerthi</option>
+                    <option value="nanditha">Nanditha</option>
+                    <option value="likitha">Likitha</option>
+                </select>
+            </div>
+            <div class="form-group" id="project-group" style="display:none;">
+                <label for="project-name">Project Name:</label>
+                <select id="project-name">
+                    <option value="">Select Project</option>
+                    <option value="mercury">Project Mercury</option>
+                    <option value="nebula">Project Nebula</option>
+                    <option value="orion">Project Orion</option>
+                    <option value="pegasus">Project Pegasus</option>
+                    <option value="andromeda">Project Andromeda</option>
+                    <option value="hydra">Project Hydra</option>
+                    <option value="lyra">Project Lyra</option>
+                    <option value="cassiopeia">Project Cassiopeia</option>
+                    <option value="draco">Project Draco</option>
+                    <option value="ursa">Project Ursa</option>
+                </select>
+            </div>
+            <div class="form-group" id="tower-group" style="display:none;">
+                <label for="tower-name">Tower Name:</label>
+                <select id="tower-name">
+                    <option value="">Select Tower</option>
+                    <option value="cloud">Cloud Computing</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="webdev">Web Development</option>
+                    <option value="bi">Business Intelligence (BI)</option>
+                    <option value="devops">DevOps</option>
+                    <option value="ai">Artificial Intelligence (AI)</option>
+                    <option value="qa">Quality Assurance (QA)</option>
+                    <option value="pm">Project Management</option>
+                    <option value="dba">Database Administration (DBA)</option>
+                    <option value="network">Network Administration</option>
+                </select>
+            </div>
+            <div class="form-group" id="skill-group" style="display:none;">
+                <label for="select-skill">Select Skill:</label>
+                <select id="select-skill">
+                    <option value="">Select Skill</option>
+                    <option value="L1">L1 - Junior Executive</option>
+                    <option value="L2">L2 - Senior Executive</option>
+                    <option value="L3">L3 - Senior Most Executive</option>
+                </select>
+            </div>
+        </div>
+        <div class="assessment-table" id="assessment-table" style="display:none;">
+            <h3>Please assess your scores here</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Services</th>
+                        <th>Technologies</th>
+                        <th>Activity</th>
+                        <th>Skill</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Rows will be added dynamically -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <div>
+                    Rows per page:
+                    <select id="rows-per-page">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                    </select>
+                </div>
+                <div>
+                    <button id="prev-page">Previous</button>
+                    <span id="page-info"></span>
+                    <button id="next-page">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Published Quarter Score</h3>
+            <div class="form-group">
+                <label for="quarter">Quarter:</label>
+                <select id="quarter">
+                    <option value="Q1">Q1</option>
+                    <option value="Q2">Q2</option>
+                    <option value="Q3">Q3</option>
+                    <option value="Q4">Q4</option>
+                </select>
+                <label for="year">Year:</label>
+                <select id="year">
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                </select>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Services</th>
+                        <th>Technologies</th>
+                        <th>Activity</th>
+                        <th>Primary Skill</th>
+                        <th>Secondary Skill</th>
+                        <th>Facilitator</th>
+                        <th>Skill</th>
+                        <th>Score</th>
+                        <th>Feedback</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="10" style="text-align:center;">No Data Found!!</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="back-button">Back</button>
+        </div>
+    </div>
+    <script src="assess_my_score.js" type="module"></script>
+    <!-- <script src="assess_my_score.js"></script> -->
+    <!-- <script src ="assessdynamic.js"></script>
+    <script src ="dynamictotal.js"></script> -->
+</body>
+</html>

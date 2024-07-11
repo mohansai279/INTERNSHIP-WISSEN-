@@ -1,0 +1,162 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+.header {
+    background-color: #ffffff;
+    color: rgb(15, 13, 114);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+.header img {
+    height: 40px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+.header .profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.header .profile span {
+    margin-right: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.header .profile .role {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0e3b9c;
+}
+.header .profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 200px;
+}
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: black;
+}
+.dropdown-menu a i {
+    margin-right: 10px;
+}
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+.container {
+    padding: 10px;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.title {
+    font-size: 1em;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid #ccc;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+th {
+    background-color: #011133;
+    color: white;
+}
+.btn {
+    background-color: rgb(3, 3, 39);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: darkblue;
+}
+.table-container {
+    flex: 1;
+    margin: 5px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.table-container:first-of-type {
+    margin-left: 0;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+.input-container label {
+    margin-bottom: 3px;
+    color: #333;
+}
+.input-container input, .input-container textarea {
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+}
+.input-container textarea {
+    height: 40px;
+}
+.input-container input:focus, .input-container textarea:focus {
+    outline: none;
+    border-color: #0f2147;
+    box-shadow: 0 0 3px rgba(15, 33, 71, 0.5);
+}
+.equal-padding-table th, .equal-padding-table td {
+    padding: 5px 10px;
+}
+.custom-table th, .custom-table td {
+    padding: 5px 5px 5px 3px;
+}
+.split-table th, .split-table td {
+    width: 50%;
+    text-align: left;
+}
+.custom-width-table th {
+    width: 40%;
+}
+.custom-width-table td {
+    width: 60%;
+}

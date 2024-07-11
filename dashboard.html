@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Catalog Login</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- Include Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <img src="dasboardlogo.png" alt="Wissen Logo">
+        <h1>SERVICE CATALOG</h1>
+        <div class="profile" id="profile">
+            <span id="employee-name">Employee Name</span>
+            <span class="role" id="employee-role">(Role)</span>
+            <img src="profile.png" alt="Profile Picture">
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="#"><i class="fas fa-user"></i> My Options</a>
+                <a href="assess_my_score.html" id="assess-update-link"><i class="fas fa-chart-bar"></i> Assess My Scores</a>
+                <a href="employeedata.html" id="employee-update-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                <a href="dashboard.html" id="home-link"><i class="fas fa-home"></i> Home</a>
+                <a href="forgertpassword.html"><i class="fas fa-unlock-alt"></i> Reset Password</a>
+                <a href="index.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section-header">
+            <div class="title">VERIFY EMPLOYEE DATA</div>
+            <a href="request_for_update.html" id="request-update-link">
+                <button class="btn">Request for Update</button>
+            </a>
+        </div>
+        <div class="table-container">
+            <table class="split-table">
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Employee ID</th>
+                </tr>
+                <tr>
+                    <td id="employee-table-name">Name</td>
+                    <td id="employee-table-id">ID</td>
+                </tr>
+            </table>
+        </div>
+        <div class="section-header">
+            <div class="title">ADD/UPDATE PROFILE DATA</div>
+            <button class="btn" id="submitData">Save</button>
+        </div>
+        <div class="table-container">
+            <form id="update-form">
+                <table class="custom-width-table">
+                    <tr>
+                        <th>Current Role*</th>
+                        <td>
+                            <div class="input-container">
+                                <input type="text" id="current-role" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Exp in current role (Months)*</th>
+                        <td>
+                            <div class="input-container">
+                                <input type="number" id="exp-current-role" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Total IT Exp (Years)*</th>
+                        <td>
+                            <div class="input-container">
+                                <input type="number" id="total-it-exp" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Certification</th>
+                        <td>
+                            <div class="input-container">
+                                <textarea id="certification"></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Primary Skill*</th>
+                        <td>
+                            <div class="input-container">
+                                <textarea id="primary-skill" required></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Secondary Skill</th>
+                        <td>
+                            <div class="input-container">
+                                <textarea id="secondary-skill"></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="dashboard.js"></script>
+</body>
+</html>

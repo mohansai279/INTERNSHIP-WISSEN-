@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Catalog</title>
+    <link rel="stylesheet" href="employeedata.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="dasboardlogo.png" alt="Wissen Logo">
+        <h1>SERVICE CATALOG</h1>
+        <div class="profile" id="profile">
+            <span id="employee-name">NAME</span>
+            <span class="role" id="employee-role">(Employee)</span>
+            <img src="profile.png" alt="Profile Picture">
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="#"><i class="fas fa-user"></i> My Options</a>
+                <a href="assess_my_score.html" id="assess-update-link"><i class="fas fa-chart-bar"></i> Assess My Scores</a>
+                <a href="employeedata.html" id="employee-update-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                <a href="dashboard.html" id="home-link"><i class="fas fa-home"></i> Home</a>
+                <a href="forgertpassword.html"><i class="fas fa-unlock-alt"></i> Reset Password</a>
+                <a href="index.html" id="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="dropdown-container">
+            <div class="dropdown">
+                <label for="project">Project</label>
+                <select id="project">
+                    <option>All</option>
+                    <option>Project Alpha</option>
+                    <option>Project Beta</option>
+                    <option>Project Gamma</option>
+                </select>
+            </div>
+            <div class="dropdown">
+                <label for="role">Role</label>
+                <select id="role">
+                    <option>All</option>
+                    <option>Developer</option>
+                    <option>Tester</option>
+                    <option>Manager</option>
+                </select>
+            </div>
+            <div class="dropdown">
+                <label for="tower">Tower</label>
+                <select id="tower">
+                    <option>All</option>
+                    <option>Tower 1</option>
+                    <option>Tower 2</option>
+                    <option>Tower 3</option>
+                </select>
+            </div>
+            <div class="dropdown">
+                <label for="primary-skills">Primary Skills</label>
+                <select id="primary-skills">
+                    <option>All</option>
+                    <option>JavaScript</option>
+                    <option>Python</option>
+                    <option>Java</option>
+                </select>
+            </div>
+            <div class="dropdown">
+                <label for="secondary-skills">Secondary Skills</label>
+                <select id="secondary-skills">
+                    <option>All</option>
+                    <option>SQL</option>
+                    <option>React</option>
+                    <option>Node.js</option>
+                </select>
+            </div>
+            <div class="dropdown">
+                <label for="manager">Manager</label>
+                <select id="manager">
+                    <option>All</option>
+                    <option>Manager A</option>
+                    <option>Manager B</option>
+                    <option>Manager C</option>
+                </select>
+            </div>
+        </div>
+        <div class="feedback-trends-container">
+            <div class="feedback-box">
+                <div class="no-of-resources">10<br>No of Resources</div>
+                <div class="adequate">Adequate Competence</div>
+                <div class="low">Low Competence</div>
+                <div class="over">Over Qualified</div>
+                <div class="qualified">Qualified for next level</div>
+                <div class="declined">Declined</div>
+                <div class="improved">Improved</div>
+                <div class="status-quo">Status Quo</div>
+            </div>
+        </div>
+        <h3 style="color: #002244;">SKILL AVAILABILITY</h3>
+        <div class="skill-availability">
+            <div class="skill-availability-header">Skill Availability</div>
+            <div class="skill-availability-content">All required skills are adequately available.</div>
+        </div>
+        
+        <h3 style="color: #002244;">RESOURCE DETAILS</h3>
+        <div class="resource-details">
+            <div class="year-quarter-container">
+                <div class="dropdown">
+                    <label for="select-year">Select Year</label>
+                    <select id="select-year">
+                        <option>All</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                    </select>
+                </div>
+                <div class="dropdown">
+                    <label for="select-quarter">Select Quarter</label>
+                    <select id="select-quarter">
+                         <option>All</option>
+                        <option>Q1</option>
+                        <option>Q2</option>
+                        <option>Q3</option>
+                        <option>Q4</option>
+                    </select>
+                </div>
+                <button class="btn" onclick="exportToExcel()">Export to Excel</button>
+            </div>
+            <table id="resource-table">
+                <thead>
+                    <tr>
+                        <th>Emp ID</th>
+                        <th>Name</th>
+                        <th>Tower</th>
+                        <th>Role</th>
+                        <th>Project</th>
+                        <th>Primary Skill</th>
+                        <th>Secondary Skill</th>
+                        <th>Previous Quarter</th>
+                        <th>Present Quarter</th>
+                        <th>Previous Quarter vs Present Quarter Comparison</th>
+                        <th>Feedback</th>
+                    </tr>
+                </thead>
+                <tbody id="resource-tbody">
+                    <tr>
+                        <td>001</td>
+                        <td>John Doe</td>
+                        <td>Tower 1</td>
+                        <td>Developer</td>
+                        <td>Project Alpha</td>
+                        <td>JavaScript</td>
+                        <td>React</td>
+                        <td>Q1</td>
+                        <td>Q2</td>
+                        <td>Improved</td>
+                        <td>Good performance</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Jane Smith</td>
+                        <td>Tower 2</td>
+                        <td>Tester</td>
+                        <td>Project Beta</td>
+                        <td>Python</td>
+                        <td>SQL</td>
+                        <td>Q1</td>
+                        <td>Q2</td>
+                        <td>Improved</td>
+                        <td>Excellent work</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Sam Brown</td>
+                        <td>Tower 1</td>
+                        <td>Manager</td>
+                        <td>Project Gamma</td>
+                        <td>Java</td>
+                        <td>Node.js</td>
+                        <td>Q2</td>
+                        <td>Q3</td>
+                        <td>Maintained</td>
+                        <td>Consistent performance</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Lisa White</td>
+                        <td>Tower 3</td>
+                        <td>Developer</td>
+                        <td>Project Alpha</td>
+                        <td>C#</td>
+                        <td>ASP.NET</td>
+                        <td>Q3</td>
+                        <td>Q4</td>
+                        <td>Improved</td>
+                        <td>Outstanding improvement</td>
+                    </tr>
+                    <tr>
+                        <td>005</td>
+                        <td>Emily Davis</td>
+                        <td>Tower 2</td>
+                        <td>Tester</td>
+                        <td>Project Delta</td>
+                        <td>Ruby</td>
+                        <td>Rails</td>
+                        <td>Q1</td>
+                        <td>Q2</td>
+                        <td>Declined</td>
+                        <td>Needs improvement</td>
+                    </tr>
+                    <tr>
+                        <td>006</td>
+                        <td>Michael Johnson</td>
+                        <td>Tower 1</td>
+                        <td>Developer</td>
+                        <td>Project Beta</td>
+                        <td>Go</td>
+                        <td>React</td>
+                        <td>Q2</td>
+                        <td>Q3</td>
+                        <td>Improved</td>
+                        <td>Great progress</td>
+                    </tr>
+                    <tr>
+                        <td>007</td>
+                        <td>Rachel Green</td>
+                        <td>Tower 3</td>
+                        <td>Designer</td>
+                        <td>Project Epsilon</td>
+                        <td>Photoshop</td>
+                        <td>Illustrator</td>
+                        <td>Q1</td>
+                        <td>Q2</td>
+                        <td>Improved</td>
+                        <td>Excellent design skills</td>
+                    </tr>
+                    <tr>
+                        <td>008</td>
+                        <td>David Miller</td>
+                        <td>Tower 2</td>
+                        <td>Analyst</td>
+                        <td>Project Zeta</td>
+                        <td>Excel</td>
+                        <td>PowerBI</td>
+                        <td>Q3</td>
+                        <td>Q4</td>
+                        <td>Maintained</td>
+                        <td>Consistent analysis</td>
+                    </tr>
+                    <tr>
+                        <td>009</td>
+                        <td>Amy Wilson</td>
+                        <td>Tower 1</td>
+                        <td>Developer</td>
+                        <td>Project Theta</td>
+                        <td>Java</td>
+                        <td>Spring</td>
+                        <td>Q2</td>
+                        <td>Q3</td>
+                        <td>Improved</td>
+                        <td>Excellent coding</td>
+                    </tr>
+                    <tr>
+                        <td>010</td>
+                        <td>James Brown</td>
+                        <td>Tower 2</td>
+                        <td>Tester</td>
+                        <td>Project Iota</td>
+                        <td>Python</td>
+                        <td>Django</td>
+                        <td>Q1</td>
+                        <td>Q2</td>
+                        <td>Declined</td>
+                        <td>Needs more training</td>
+                    </tr>
+                    <tr>
+                        <td>011</td>
+                        <td>Linda Evans</td>
+                        <td>Tower 3</td>
+                        <td>Manager</td>
+                        <td>Project Kappa</td>
+                        <td>Leadership</td>
+                        <td>Communication</td>
+                        <td>Q3</td>
+                        <td>Q4</td>
+                        <td>Improved</td>
+                        <td>Strong leadership</td>
+                    </tr>
+                    <tr>
+                        <td>012</td>
+                        <td>Chris Martin</td>
+                        <td>Tower 1</td>
+                        <td>Analyst</td>
+                        <td>Project Lambda</td>
+                        <td>SQL</td>
+                        <td>Tableau</td>
+                        <td>Q2</td>
+                        <td>Q3</td>
+                        <td>Maintained</td>
+                        <td>Consistent performance</td>
+                    </tr>
+                    <tr>
+                        <td>013</td>
+                        <td>Sarah Taylor</td>
+                        <td>Tower 2</td>
+                        <td>Developer</td>
+                        <td>Project Mu</td>
+                        <td>JavaScript</td>
+                        <td>Vue.js</td>
+                        <td>Q1</td>
+                        <td>Q2</td>
+                        <td>Improved</td>
+                        <td>Excellent frontend skills</td>
+                    </tr>
+                    <tr>
+                        <td>014</td>
+                        <td>Mark Anderson</td>
+                        <td>Tower 3</td>
+                        <td>Tester</td>
+                        <td>Project Nu</td>
+                        <td>Python</td>
+                        <td>Flask</td>
+                        <td>Q2</td>
+                        <td>Q3</td>
+                        <td>Improved</td>
+                        <td>Great testing skills</td>
+                    </tr>
+                    <tr>
+                        <td>015</td>
+                        <td>Jessica Lee</td>
+                        <td>Tower 1</td>
+                        <td>Designer</td>
+                        <td>Project Xi</td>
+                        <td>Photoshop</td>
+                        <td>XD</td>
+                        <td>Q3</td>
+                        <td>Q4</td>
+                        <td>Improved</td>
+                        <td>Excellent designs</td>
+                    </tr>
+                    <tr>
+                        <td>016</td>
+                        <td>Brian Scott</td>
+                        <td>Tower 2</td>
+                        <td>Manager</td>
+                        <td>Project Omicron</td>
+                        <td>Leadership</td>
+                        <td>Agile</td>
+                        <td>Q1</td>
+                        <td>Q2</td>
+                        <td>Maintained</td>
+                        <td>Strong management</td>
+                    </tr>
+                    <tr>
+                        <td>017</td>
+                        <td>Laura King</td>
+                        <td>Tower 3</td>
+                        <td>Analyst</td>
+                        <td>Project Pi</td>
+                        <td>Excel</td>
+                        <td>SAS</td>
+                        <td>Q2</td>
+                        <td>Q3</td>
+                        <td>Improved</td>
+                        <td>Great analytical skills</td>
+                    </tr>
+                    <tr>
+                        <td>018</td>
+                        <td>Jason Lee</td>
+                        <td>Tower 1</td>
+                        <td>Developer</td>
+                        <td>Project Rho</td>
+                        <td>JavaScript</td>
+                        <td>Angular</td>
+                        <td>Q3</td>
+                        <td>Q4</td>
+                        <td>Improved</td>
+                        <td>Strong development</td>
+                    </tr>
+                    <tr>
+                        <td>019</td>
+                        <td>Hannah Clark</td>
+                        <td>Tower 2</td>
+                        <td>Tester</td>
+                        <td>Project Sigma</td>
+                        <td>Java</td>
+                        <td>JUnit</td>
+                        <td>Q1</td>
+                        <td>Q2</td>
+                        <td>Improved</td>
+                        <td>Excellent testing</td>
+                    </tr>
+                    <tr>
+                        <td>020</td>
+                        <td>Brandon Turner</td>
+                        <td>Tower 3</td>
+                        <td>Manager</td>
+                        <td>Project Tau</td>
+                        <td>Leadership</td>
+                        <td>Scrum</td>
+                        <td>Q2</td>
+                        <td>Q3</td>
+                        <td>Maintained</td>
+                        <td>Consistent leadership</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="dynamicLoader.js"></script>
+    <script src="employeedata.js"></script>
+</body>
+
+</html>
