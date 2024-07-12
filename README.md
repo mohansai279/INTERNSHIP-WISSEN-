@@ -53,5 +53,14 @@ Key Features:
 <p align="center">
   <img src="https://github.com/mohansai279/INTERNSHIP-WISSEN-/assets/105854251/bb16d9d6-0568-4b7c-ba80-72c45a95b295" alt="EMPLOYEE DATA" />
 </p>
-
+Request for Update (request_for_update.html)
+<p>**Description:**<br>
+This page allows employees to request updates to their personal or job-related information. It provides a form to submit update requests.
+</p>
+Key Features:
+<p>- **Form for requesting updates**<br>
+- **Tracking status of update requests**</p>
+<p align="center">
+  <img src="https://github.com/mohansai279/INTERNSHIP-WISSEN-/assets/105854251/58364c4a-9662-4d7b-b156-e5d80d27e91d" alt="REQUEST FOR UPDATE" />
+</p>
   
