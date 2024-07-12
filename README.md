@@ -5,10 +5,27 @@ This repository is part of an ongoing project for the Service Catalogue. It focu
   <img src="https://github.com/mohansai279/INTERNSHIP-WISSEN-/assets/105854251/c8fe4f77-5d1d-4fbf-a666-3c646a2d4d69" alt="wissen logo" />
 </p>
 
+index.html
+Description:
+The main landing page for the Service Catalogue. This page provides an overview of the service offerings and a gateway to various functionalities related to employee management.
+
+Key Features:
+
+Navigation to different sections of the Service Catalogue
+Overview of the available services
+
 <p align="center">
   <img src="https://github.com/mohansai279/INTERNSHIP-WISSEN-/assets/105854251/a50dca31-c946-4522-b634-33a92e648fb6" alt="LOGIN PAGE" />
 </p>
+dashboard.html
+Description:
+The dashboard page for employees, where users can view their profile, access various services, and see an overview of their activity and updates.
 
+Key Features:
+
+Employee profile overview
+Activity feed
+Access to various employee-related services
 <p align="center">
   <img src="https://github.com/mohansai279/INTERNSHIP-WISSEN-/assets/105854251/8ed22e26-2115-4ca3-9fcc-250e52f8b320" alt="forgertpassword" />
 </p>
