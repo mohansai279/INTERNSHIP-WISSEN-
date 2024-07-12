@@ -5,6 +5,13 @@ INTERNSHIP-WISSEN-
 <p>**Registration Form for New Employees**<br>Validation and submission of registration data</p>
 <p align="center">
   <img src="https://github.com/mohansai279/INTERNSHIP-WISSEN-/assets/105854251/0990e168-5e75-4057-abfe-693c56ace6fb" alt="signup" />
+LOGIN PAGE:
+ <p>you can login to the page after crating the account based on the role so as of now in this project we had completed upto to only employee side so to see how the dashboard page and access to the web page here are the login credentials</p> 
+ <P>empid:0279</P>
+ <p>password:123456</p>
+ <p>emp-id:0123</p>
+ <P>password:venu123</P>
+ <img src="" 
 </p>
 Dashboard (dashboard.html)
 <p>**Description:**<br>
